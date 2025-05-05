@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,6 +50,16 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom colors for our text editor */
+    --editor-bg: 231 20% 14%;
+    --editor-text: 0 0% 100%;
+    --editor-line-number: 220 13% 50%;
+    --editor-highlight: 257 70% 75% / 0.2;
+    --editor-primary: 257 70% 75%;
+    --editor-secondary: 257 35% 55%;
+    --editor-accent: 257 50% 85%;
+    --editor-border: 220 13% 20%;
   }
 
   .dark {
@@ -97,5 +108,42 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  .text-editor {
+    @apply font-mono text-base;
+    background-color: hsl(var(--editor-bg));
+    color: hsl(var(--editor-text));
+  }
+  
+  .text-editor-line {
+    @apply py-1 flex items-center;
+  }
+  
+  .text-editor-line:hover {
+    background-color: hsl(var(--editor-highlight));
+  }
+  
+  .line-number {
+    @apply w-12 text-right pr-4 select-none;
+    color: hsl(var(--editor-line-number));
+  }
+  
+  .line-content {
+    @apply flex-1;
+  }
+
+  .editor-button {
+    @apply px-4 py-2 rounded-md focus:outline-none transition-colors;
+    background-color: hsl(var(--editor-primary));
+    color: hsl(var(--editor-text));
+  }
+  
+  .editor-button:hover {
+    background-color: hsl(var(--editor-secondary));
+  }
+  
+  .editor-button:disabled {
+    @apply opacity-50 cursor-not-allowed;
   }
 }
