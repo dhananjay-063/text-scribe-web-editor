@@ -1,0 +1,11 @@
+Problem Definition:
+Design and implement a simple command-line text editor that allows users to perform
+basic text editing operations such as open, edit, save, delete, search, and replace. The
+editor should handle text manipulation and provide a minimalistic user interface, with
+navigation controls (e.g., moving the cursor, jumping to specific lines).
+Skills Involved:
+Text Processing: Implementing basic text operations like insert, delete, and replace.
+File I/O: Reading and writing text files from disk.
+User Interface: Creating a command-line interface for user input and navigation.
+Data Structures: Using appropriate data structures to store and manipulate text.
+Event Handling: Handling user input and editor events (e.g., key presses)
